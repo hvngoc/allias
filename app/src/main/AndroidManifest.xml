@@ -12,14 +12,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LogoAlias"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name=".DefaultAlias"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_lo1"
+            android:roundIcon="@mipmap/ic_launcher_lo1_round"
+            android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity-alias>
+
+
+        <activity-alias
+            android:name=".NextAlias"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_lo2"
+            android:roundIcon="@mipmap/ic_launcher_lo2_round"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+
     </application>
 
 </manifest>
